@@ -1,0 +1,50 @@
+---
+- name:                    "node1"
+  vm_box: "centos/7"
+  vm_memory: 256
+  vm_cpus: 1
+
+  privNet:
+    - :adapter:            2
+      :ip:                 "10.0.10.101"
+      :netmask:            "255.255.255.0"
+      :virtualbox__intnet: "area1"
+
+  pubNet:
+    - :adapter:            3
+      :ip:                 "172.16.10.101"
+      :netmask:            "255.255.255.0"
+
+
+- name:                    "node2"
+  vm_box: "centos/7"
+  vm_memory: 256
+  vm_cpus: 1
+
+  privNet:
+    - :adapter:            2
+      :ip:                 "10.0.10.102"
+      :netmask:            "255.255.255.0"
+      :virtualbox__intnet: "area1"
+
+  pubNet:
+    - :adapter:            3
+      :ip:                 "172.16.10.102"
+      :netmask:            "255.255.255.0"
+
+
+- name:                    "node3"
+  vm_box: "centos/7"
+  vm_memory: 256
+  vm_cpus: 1
+
+  privNet:
+    - :adapter:            2
+      :ip:                 "10.0.10.103"
+      :netmask:            "255.255.255.0"
+      :virtualbox__intnet: "area1"
+
+  pubNet:
+    - :adapter:            3
+      :ip:                 "172.16.10.10"
+      :netmask:            "255.255.255.0"
