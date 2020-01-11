@@ -21,9 +21,9 @@ Vagrant.configure(2) do |config|
         node.vm.network "private_network", param
       end
 
-      nodes["pubNet"].each do |param|
-        node.vm.network "public_network", param
-      end
+      #nodes["pubNet"].each do |param|
+      #  node.vm.network "public_network", param
+      #end
 
       node.vm.synced_folder "sync", "/vagrant", type: "rsync"
 
